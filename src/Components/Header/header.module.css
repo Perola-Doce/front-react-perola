@@ -1,0 +1,31 @@
+.principal{
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: solid 1px #d1d1d1;
+}
+
+.divLinks{
+    width: 16%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.link{
+    color: #B367DE;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.img{
+    width: 8rem;
+}
+
+.divButtons{
+    width: 4rem;
+    display: flex;
+    justify-content: space-around;
+}
