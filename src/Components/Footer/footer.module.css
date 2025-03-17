@@ -1,0 +1,15 @@
+.principal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.blocos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blocoImg{
+    width: 2rem;
+}
