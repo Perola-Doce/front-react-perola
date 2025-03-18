@@ -8,15 +8,15 @@ export default function Footer(){
         <footer className={style.principal}>
             <div className={style.blocos}>
                 <img className={style.blocoImg} src={caminhao} alt="" />
-                <p>Entrega Rápida</p>
+                <p className={style.nome}>Entrega Rápida</p>
             </div>
             <div className={style.blocos}>
                 <img className={style.blocoImg} src={coracaoRosa} alt="" />
-                <p>Doces Feitos Com Amor</p>
+                <p className={style.nome}> Doces Feitos Com Amor</p>
             </div>
             <div className={style.blocos}>
                 <img className={style.blocoImg} src={presente} alt="" />
-                <p>Presente Perfeito</p>
+                <p className={style.nome}>Presente Perfeito</p>
             </div>
         </footer>
     )
