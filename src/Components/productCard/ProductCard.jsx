@@ -12,7 +12,7 @@ export default function ProductCard( {fotoProduto, nomeProduto, descricaoProduto
             <p className={style.descricaoProduto}>{descricaoProduto}</p>
             <div className={style.precoCarrinho}>
                 <h3 className={style.preco}>R${preco}</h3>
-                <Button />
+                <Button titulo={"Adicione ao Carrinho"}/>
             </div>
         </div>
     )
