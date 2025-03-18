@@ -15,13 +15,13 @@ export default function MaisVendidos(){
                 />
 
                 <ProductCard 
-                fotoProduto={"https://i.pinimg.com/736x/d1/6f/9d/d16f9d6c461fb571fb1a25759fff3de5.jpg"} nomeProduto={"Brownie com Nutella"}
+                fotoProduto={"https://i.pinimg.com/736x/d1/6f/9d/d16f9d6c461fb571fb1a25759fff3de5.jpg"} nomeProduto={"Pão de mel de doce de leite"}
                 descricaoProduto={"Um delicioso bolo macio com nutella por cima "}
                 preco={"12,00"}
                 />
 
                 <ProductCard 
-                fotoProduto={"https://i.pinimg.com/736x/d1/6f/9d/d16f9d6c461fb571fb1a25759fff3de5.jpg"} nomeProduto={"Brownie com Nutella"}
+                fotoProduto={"https://i.pinimg.com/736x/d1/6f/9d/d16f9d6c461fb571fb1a25759fff3de5.jpg"} nomeProduto={"Brownie com morango"}
                 descricaoProduto={"Um delicioso bolo macio com nutella por cima "}
                 preco={"12,00"}
                 />
