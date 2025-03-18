@@ -1,0 +1,42 @@
+.principal{
+    width: 16rem;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 1px 1px 8px rgb(176, 176, 176);
+    background-color: white;
+}
+
+.cardImg{
+    display: flex;
+    flex-direction: row;
+}
+
+.fotoProduto{
+    width: 8rem;
+    height: 10rem;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.nomeProduto{
+    width: 4rem;
+    padding-left: 1rem;
+    color: #B367DE;
+    font-size: 24px;
+}
+
+.descricaoProduto{
+    color: #848484;
+    font-size: 16px;
+}
+
+.precoCarrinho{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.preco{
+    color: #FF347D;
+    
+}
