@@ -1,31 +1,49 @@
-import ProductCard from '../productCard/ProductCard'
-import style from './maisVendidos.module.css'
+import ProductCard from '../productCard/ProductCard';
+import style from './maisVendidos.module.css';
+import { useEffect, useState } from "react";
 
-export default function MaisVendidos(){
-    return(
+export default function MaisVendidos() {
+    const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    async function fetchProducts(callback) {
+        try {
+            const response = await fetch("https://apidoce.onrender.com/api/products/all");
+            if (!response.ok) {
+                throw new Error("Erro ao buscar produtos");
+            }
+            const data = await response.json();
+            callback(data); 
+        } catch (err) {
+            setError(err.message);
+            console.log(err.message)
+        } finally {
+            setLoading(false);
+        }
+    }
+
+    useEffect(() => {
+        fetchProducts(setProducts);
+    }, []);
+
+    if (loading) return <p>Carregando...</p>;
+    if (error) return <p>Erro: {error}</p>;
+
+    return (
         <div className={style.divProdutos}>
-            <h1>
-                Mais vendidos
-            </h1>
+            <h1>Mais vendidos</h1>
             <div className={style.produtos}>
-                <ProductCard 
-                fotoProduto={"https://i.pinimg.com/736x/d1/6f/9d/d16f9d6c461fb571fb1a25759fff3de5.jpg"} nomeProduto={"Brownie com Nutella"}
-                descricaoProduto={"Um delicioso bolo macio com nutella por cima "}
-                preco={"12,00"}
-                />
-
-                <ProductCard 
-                fotoProduto={"https://i.pinimg.com/736x/d1/6f/9d/d16f9d6c461fb571fb1a25759fff3de5.jpg"} nomeProduto={"Pão de mel de doce de leite"}
-                descricaoProduto={"Um delicioso bolo macio com nutella por cima "}
-                preco={"12,00"}
-                />
-
-                <ProductCard 
-                fotoProduto={"https://i.pinimg.com/736x/d1/6f/9d/d16f9d6c461fb571fb1a25759fff3de5.jpg"} nomeProduto={"Brownie com morango"}
-                descricaoProduto={"Um delicioso bolo macio com nutella por cima "}
-                preco={"12,00"}
-                />
+                {products.slice(0, 3).map(produto => (
+                    <ProductCard
+                        key={produto.id}
+                        fotoProduto={produto.image}
+                        nomeProduto={produto.name}
+                        descricaoProduto={produto.description}
+                        preco={produto.price}
+                    />
+                ))}
             </div>
         </div>
-    )
+    );
 }
