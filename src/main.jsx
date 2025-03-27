@@ -6,6 +6,7 @@ import Footer from './Components/Footer/Footer.jsx'
 import MaisVendidos from './Components/MaisVendidos/MaisVendidos.jsx'
 import Button from './Components/Button/Button.jsx'
 import style from './main.module.css'
+import Carrinho from './Components/Carrinho/Carrinho.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -19,6 +20,7 @@ createRoot(document.getElementById('root')).render(
       <img className={style.imagem} src="https://i.pinimg.com/736x/50/df/6a/50df6a7fa81f0964c8a1cb81e8d81f45.jpg" alt="" />
     </section>
     <MaisVendidos />
+    <Carrinho />
     <Footer />
   </StrictMode>,
 )

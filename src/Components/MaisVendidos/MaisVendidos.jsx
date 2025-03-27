@@ -27,7 +27,7 @@ export default function MaisVendidos() {
         fetchProducts(setProducts);
     }, []);
 
-    if (loading) return <p>Carregando...</p>;
+    if (loading) return <div className={style.carregamento}><h1>Preparando os docinhos...</h1></div>;
     if (error) return <p>Erro: {error}</p>;
 
     return (
