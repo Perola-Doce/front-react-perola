@@ -8,9 +8,9 @@
     padding-top: 2rem;
 }
   
-  h1{
-    color: #B367DE;
-  }
+h1{
+  color: #B367DE;
+}
   
 .produtos{
     display: flex;
@@ -18,8 +18,10 @@
     width: 90%;
 }
 
-.carregando{
+.carregamento{
   display: flex;
   justify-content: center;
+
+  background-color: #decce8;
   color: #B367DE;
 }
