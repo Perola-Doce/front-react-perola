@@ -9,9 +9,7 @@ export default function Header({ onClick }) {
             <div className={style.divLinks}>
                 <a className={style.link} href="/home">Home</a>
             </div>
-            <div className={style.divButtons} onClick={onClick}>
-                <a href=""><img src={carrinho} alt="" /></a>
-            </div>
+            <a onClick={onClick} href=""><img src={carrinho} alt="" /></a>
         </div>
     );
 }
