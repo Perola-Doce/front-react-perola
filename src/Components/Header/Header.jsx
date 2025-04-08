@@ -9,7 +9,7 @@ export default function Header({ onClick }) {
             <div className={style.divLinks}>
                 <a className={style.link} href="/home">Home</a>
             </div>
-            <a onClick={onClick} href=""><img src={carrinho} alt="" /></a>
+            <a onClick={onClick}><img src={carrinho} alt='Icone de carrinho'/></a>
         </div>
     );
 }
