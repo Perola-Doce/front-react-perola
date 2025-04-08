@@ -1,10 +1,45 @@
-.principal{
-    padding: 1rem;
-    width: min-content;
-    border-radius: 32px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4); /* fundo escuro translúcido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal {
+    background-color: #fff;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    padding: 2rem;
+    border-radius: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    overflow-y: auto; /* rolagem interna */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 1rem;
+    position: relative;
 }
+
+.closeButton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #333;
+}
+
+.produtos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+

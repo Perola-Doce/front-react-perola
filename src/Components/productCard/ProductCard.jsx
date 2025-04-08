@@ -2,7 +2,7 @@ import Button from '../Button/Button';
 import style from './productCard.module.css'
 import PropTypes from 'prop-types';
 
-export default function ProductCard( {fotoProduto, nomeProduto, descricaoProduto, preco} ){
+export default function ProductCard( {fotoProduto, nomeProduto, descricaoProduto, preco, adicionarAoCarrinho } ){
     return(
         <div className={style.principal}>
             <div className={style.cardImg}>
@@ -12,7 +12,13 @@ export default function ProductCard( {fotoProduto, nomeProduto, descricaoProduto
             <p className={style.descricaoProduto}>{descricaoProduto}</p>
             <div className={style.precoCarrinho}>
                 <h3 className={style.preco}>R${preco}</h3>
-                <Button titulo={"Adicione ao Carrinho"}/>
+                <Button titulo={"Adicione ao Carrinho"} 
+                onClick={() => adicionarAoCarrinho({
+                    image: fotoProduto,
+                    name: nomeProduto,
+                    description: descricaoProduto,
+                    price: preco
+                })}/>
             </div>
         </div>
     )

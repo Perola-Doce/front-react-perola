@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import style from './button.module.css';
 
-export default function Button({ titulo, backgroundColor }) {
+export default function Button({ titulo, backgroundColor, onClick }) {
     // Definição das cores em RGB
     const backgroundColors = {
         roxo: '#B367DE',
@@ -10,6 +10,7 @@ export default function Button({ titulo, backgroundColor }) {
 
     return (
         <button 
+            onClick={onClick}
             className={style.button} 
             style={{ backgroundColor: backgroundColors[backgroundColor] || backgroundColors.roxo }}
         >

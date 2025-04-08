@@ -2,7 +2,7 @@ import ProductCard from '../productCard/ProductCard';
 import style from './maisVendidos.module.css';
 import { useEffect, useState } from "react";
 
-export default function MaisVendidos() {
+export default function MaisVendidos( { adicionarAoCarrinho } ) {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -41,6 +41,7 @@ export default function MaisVendidos() {
                         nomeProduto={produto.name}
                         descricaoProduto={produto.description}
                         preco={produto.price}
+                        adicionarAoCarrinho={adicionarAoCarrinho}
                     />
                 ))}
             </div>
